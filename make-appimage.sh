@@ -12,6 +12,7 @@ export ICON=https://gitlab.com/qemu-project/qemu/-/raw/master/ui/icons/qemu.svg
 export DESKTOP=DUMMY
 export MAIN_BIN=qemu-system-x86_64
 export DEPLOY_GTK=1
+export GTK_DIR=gtk-3.0
 export DEPLOY_OPENGL=1
 export DEPLOY_VULKAN=1
 
