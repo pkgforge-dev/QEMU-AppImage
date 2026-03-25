@@ -25,5 +25,5 @@ get-debloated-pkgs --add-common --prefer-nano
 #make-aur-package PACKAGENAME
 
 # If the application needs to be manually built that has to be done down here
-mkdir -p ./AppDir/bin
+#mkdir -p ./AppDir/bin
 #cp /usr/share/qemu/* ./AppDir/bin
