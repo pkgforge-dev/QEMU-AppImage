@@ -12,6 +12,7 @@ pacman -Syu --noconfirm      \
     libdecor                 \
     qemu-system-x86          \
     qemu-system-x86-firmware \
+    qemu-ui-gtk              \
     sdl2                     \
     seabios
 
