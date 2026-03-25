@@ -1,21 +1,34 @@
 <div align="center">
 
-# TEMPLATE-AppImage 🐧
+# QEMU-AppImage 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/TEMPLATE-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/TEMPLATE-AppImage/releases/latest)
-[![CI Build Status](https://github.com/pkgforge-dev/TEMPLATE-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/TEMPLATE-AppImage/releases/latest)
-[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/TEMPLATE-AppImage)](https://github.com/pkgforge-dev/TEMPLATE-AppImage/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/QEMU-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/QEMU-AppImage/releases/latest)
+[![CI Build Status](https://github.com/pkgforge-dev/QEMU-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/QEMU-AppImage/releases/latest)
+[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/QEMU-AppImage)](https://github.com/pkgforge-dev/QEMU-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/pkgforge-dev.png" width="128" />
+  <img src="https://gitlab.com/qemu-project/qemu/-/raw/master/ui/icons/qemu.svg" width="128" />
 </p>
 
 
 | Latest Stable Release | Upstream URL |
 | :---: | :---: |
-| [Click here](https://github.com/pkgforge-dev/TEMPLATE-AppImage/releases/latest) | [Click here](https://github.com/pkgforge-dev/Anylinux-AppImages) |
+| [Click here](https://github.com/pkgforge-dev/QEMU-AppImage/releases/latest) | [Click here](https://gitlab.com/qemu-project/qemu) |
 
 </div>
+
+* By default it runs `qemu-system-x86_64` but if needed to emulate other platforms (contains all platforms like arm hppa m68k ppc sh4 etc) or run other tools like `qemu-img` or `qemu-user`, e.g. you can do the following: 
+
+```
+To emulate i386 system                                         ./QEMU-*-anylinux-*.AppImage qemu-system-i386
+To create qemu images                                          ./QEMU-*-anylinux-*.AppImage qemu-img
+To use x86_64 qemu user mode emulation                         ./QEMU-*-anylinux-*.AppImage qemu-x86_64
+To use i386 qemu user mode emulation                           ./QEMU-*-anylinux-*.AppImage qemu-i386
+To mount qemu image                                            ./QEMU-*-anylinux-*.AppImage qemu-ndb
+To exercise the QEMU I/O path                                  ./QEMU-*-anylinux-*.AppImage qemu-io
+To use block drivers (included curl dmg gluster iscsi nfs ssh) ./QEMU-*-anylinux-*.AppImage qemu-block-*
+```
+* Supports -enable-kvm, TPM, UEFI, virtiofsd and audio.
 
 ---
 
