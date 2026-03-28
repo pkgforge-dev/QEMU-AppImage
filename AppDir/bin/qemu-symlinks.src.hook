@@ -6,7 +6,7 @@ _make_symlinks() {
 	bindir=${XDG_BIN_HOME:-~/.local/bin}
 	mkdir -p "$bindir"
 	set +e
-	set -- "$APPDIR"/bin/qemu*
+	set -- "$APPDIR"/bin/qemu* "$APPDIR"/bin/quickemu
 	for b do
 		ln -sv "$APPIMAGE" "$bindir"/"${b##*/}" 2>/dev/null
 	done
