@@ -1,10 +1,10 @@
 <div align="center">
 
-# QEMU-x86-AppImage 🐧
+# QEMU-AppImage 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/QEMU-x86-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/QEMU-x86-AppImage/releases/latest)
-[![CI Build Status](https://github.com/pkgforge-dev/QEMU-x86-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/QEMU-x86-AppImage/releases/latest)
-[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/QEMU-x86-AppImage)](https://github.com/pkgforge-dev/QEMU-x86-AppImage/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/QEMU-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/QEMU-AppImage/releases/latest)
+[![CI Build Status](https://github.com/pkgforge-dev/QEMU-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/QEMU-AppImage/releases/latest)
+[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/QEMU-AppImage)](https://github.com/pkgforge-dev/QEMU-AppImage/releases/latest)
 
 <p align="center">
   <img src="https://gitlab.com/qemu-project/qemu/-/raw/master/ui/icons/qemu.svg" width="128" />
@@ -13,7 +13,7 @@
 
 | Latest Stable Release | Upstream URL |
 | :---: | :---: |
-| [Click here](https://github.com/pkgforge-dev/QEMU-x86-AppImage/releases/latest) | [Click here](https://gitlab.com/qemu-project/qemu) |
+| [Click here](https://github.com/pkgforge-dev/QEMU-AppImage/releases/latest) | [Click here](https://gitlab.com/qemu-project/qemu) |
 
 </div>
 
