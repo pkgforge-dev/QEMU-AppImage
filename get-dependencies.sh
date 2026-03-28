@@ -24,6 +24,7 @@ pacman -Syu --noconfirm --overwrite '/usr/share/qemu/*' \
     qemu-desktop     \
     qemu-user        \
     qemu-user-binfmt \
+    spice-gtk        \
     swtpm            \
     virtiofsd
 
@@ -32,7 +33,8 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
-#make-aur-package PACKAGENAME
+make-aur-package zenity-rs-bin
+make-aur-package quickemu
 
 # If the application needs to be manually built that has to be done down here
 #mkdir -p ./AppDir/bin
