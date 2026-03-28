@@ -20,14 +20,30 @@
 * By default it runs `qemu-system-x86_64` but if needed to emulate other platforms (contains all platforms like arm hppa m68k ppc sh4 etc) or run other tools like `qemu-img` or `qemu-user`, e.g. you can do the following: 
 
 ```
-To emulate i386 system                                         ./QEMU-*-anylinux-*.AppImage qemu-system-i386
-To create qemu images                                          ./QEMU-*-anylinux-*.AppImage qemu-img
-To use x86_64 qemu user mode emulation                         ./QEMU-*-anylinux-*.AppImage qemu-x86_64
-To use i386 qemu user mode emulation                           ./QEMU-*-anylinux-*.AppImage qemu-i386
-To mount qemu image                                            ./QEMU-*-anylinux-*.AppImage qemu-ndb
-To exercise the QEMU I/O path                                  ./QEMU-*-anylinux-*.AppImage qemu-io
-To use block drivers (included curl dmg gluster iscsi nfs ssh) ./QEMU-*-anylinux-*.AppImage qemu-block-*
+# To emulate i386 system                                         
+./QEMU*.AppImage qemu-system-i386
+
+# To create qemu images
+./QEMU*.AppImage qemu-img
+
+# To use x86_64 qemu user mode emulation
+./QEMU*.AppImage qemu-x86_64
+
+# To use i386 qemu user mode emulation
+./QEMU*.AppImage qemu-i386
+
+# To mount qemu image
+./QEMU*.AppImage qemu-ndb
+
+# To exercise the QEMU I/O path
+./QEMU*.AppImage qemu-io
+
+# To use block drivers (included curl dmg gluster iscsi nfs ssh)
+./QEMU*.AppImage qemu-block-*
 ```
+
+**Or simply run `./QEMU*.AppImage --make-symlinks`** which will expose each bundled binary in `~/.local/bin` as symlinks to be AppImage. (Similar to how busybox works).
+
 * Supports -enable-kvm, TPM, UEFI, virtiofsd and audio.
 
 ---
