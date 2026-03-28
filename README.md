@@ -17,6 +17,10 @@
 
 </div>
 
+### ⚠️ Need to have `qemu-user-static-binfmt` installed to be able to use qemu-userspace ⚠️
+
+* Supports -enable-kvm, TPM, UEFI (GPU passthrough), virtiofsd and audio.
+
 * By default it runs `qemu-system-x86_64` but if needed to emulate other platforms (contains all platforms like arm hppa m68k ppc sh4 etc) or run other tools like `qemu-img` or `qemu-user`, e.g. you can do the following: 
 
 ```
@@ -42,13 +46,11 @@
 ./QEMU*.AppImage qemu-block-*
 ```
 
-**Or simply run `./QEMU*.AppImage --make-symlinks`** which will expose each bundled binary in `~/.local/bin` as symlinks to be AppImage. (Similar to how busybox works).
-
-* Supports -enable-kvm, TPM, UEFI, virtiofsd and audio.
+**Or simply run `./QEMU*.AppImage --make-symlinks`** which will expose each bundled binary in `~/.local/bin` as symlinks the AppImage (similar to how busybox works).
 
 ---
 
-AppImage made using [sharun](https://github.com/VHSgunzo/sharun) and its wrapper [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
+AppImage made using [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
 
 **This AppImage bundles everything and it should work on any Linux distro, including old and musl-based ones.**
 
