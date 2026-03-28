@@ -20,13 +20,13 @@
 * By default it runs `qemu-system-x86_64` but if needed to emulate other platforms (contains all platforms like arm hppa m68k ppc sh4 etc) or run other tools like `qemu-img` or `qemu-user`, e.g. you can do the following: 
 
 ```
-To emulate i386 system                                         ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-system-i386
-To create qemu images                                          ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-img
-To use x86_64 qemu user mode emulation                         ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-x86_64
-To use i386 qemu user mode emulation                           ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-i386
-To mount qemu image                                            ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-ndb
-To exercise the QEMU I/O path                                  ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-io
-To use block drivers (included curl dmg gluster iscsi nfs ssh) ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-block-*
+To emulate i386 system                                         ./QEMU-*-anylinux-*.AppImage qemu-system-i386
+To create qemu images                                          ./QEMU-*-anylinux-*.AppImage qemu-img
+To use x86_64 qemu user mode emulation                         ./QEMU-*-anylinux-*.AppImage qemu-x86_64
+To use i386 qemu user mode emulation                           ./QEMU-*-anylinux-*.AppImage qemu-i386
+To mount qemu image                                            ./QEMU-*-anylinux-*.AppImage qemu-ndb
+To exercise the QEMU I/O path                                  ./QEMU-*-anylinux-*.AppImage qemu-io
+To use block drivers (included curl dmg gluster iscsi nfs ssh) ./QEMU-*-anylinux-*.AppImage qemu-block-*
 ```
 * Supports -enable-kvm, TPM, UEFI, virtiofsd and audio.
 
