@@ -2,6 +2,7 @@
 
 _make_symlinks() {
 	[ -n "$APPIMAGE" ] || return 1
+	[ -n "$APPDIR" ] || return 1
 	bindir=${XDG_BIN_HOME:-~/.local/bin}
 	mkdir -p "$bindir"
 	set +e
