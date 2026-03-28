@@ -26,6 +26,7 @@
 ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-i386 to use 32-bit qemu user mode emulation
 ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-ndb to mount qemu image
 ./qemu-system-x86_64-*-anylinux-*.AppImage qemu-io to exercise the QEMU I/O path
+./qemu-system-x86_64-*-anylinux-*.AppImage qemu-block-* block drivers included: curl dmg gluster iscsi nfs ssh
 ```
 
 ---
