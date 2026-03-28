@@ -9,10 +9,6 @@ export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://gitlab.com/qemu-project/qemu/-/raw/master/ui/icons/qemu.svg
-export DESKTOP=DUMMY
-export MAIN_BIN=qemu-system-x86_64
-export APPNAME=QEMU
-export STARTUPWMCLASS=qemu
 export DEPLOY_GTK=1
 export GTK_DIR=gtk-3.0
 export DEPLOY_OPENGL=1
@@ -20,7 +16,7 @@ export DEPLOY_VULKAN=1
 export DEPLOY_PIPEWIRE=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/qemu-* /usr/lib/qemu/*.so
+quick-sharun /usr/bin/qemu-* /usr/lib/qemu/*.so /usr/lib/libcapstone.so.5
 
 # Additional changes can be done in between here
 
