@@ -17,11 +17,14 @@ export DEPLOY_PIPEWIRE=1
 
 # Deploy dependencies
 quick-sharun \
-	/usr/bin/qemu-*    \
-	/usr/lib/qemu/*.so \
-	/usr/bin/bash      \
-	/usr/bin/zenity    \
-	/usr/bin/spicy     \
+	/usr/bin/qemu-*      \
+	/usr/lib/qemu/*.so   \
+	/usr/bin/bash        \
+	/usr/bin/zenity      \
+	/usr/bin/spicy       \
+	/usr/bin/quickemu    \
+	/usr/bin/quickget    \
+	/usr/bin/quickreport \
 	/usr/lib/libcapstone.so.5
 
 # Additional changes can be done in between here
