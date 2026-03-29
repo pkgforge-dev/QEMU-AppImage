@@ -16,7 +16,6 @@ else
     pacman -S --noconfirm edk2-aarch64 edk2-arm
 fi
 pacman -Syu --noconfirm --overwrite '/usr/share/qemu/*' \
-    gtk3             \
     libdecor         \
     pipewire-audio   \
     pipewire-jack    \
