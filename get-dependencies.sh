@@ -7,17 +7,20 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 if [ "$ARCH" = "aarch64" ]; then
-    wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-aarch64-202508-1-any.pkg.tar.zst
-    wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-arm-202508-1-any.pkg.tar.zst
-    wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-ovmf-202508-1-any.pkg.tar.zst
+    DATE=202608-1
+    wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-aarch64-${DATE}-any.pkg.tar.zst
+    wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-riscv64-${DATE}-any.pkg.tar.zst
+    wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/qemu-system-arm-firmware-11.1.2-1-x86_64.pkg.tar.zst
+    wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-ovmf-${DATE}-any.pkg.tar.zst
     wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/seabios-1.17.0-2-any.pkg.tar.zst
-    pacman -U seabios-*.pkg.tar.zst edk2-*.pkg.tar.zst --noconfirm
+    pacman -U *.pkg.tar.zst --noconfirm --arch x86_64
 else
-    pacman -S --noconfirm edk2-aarch64 edk2-arm
+    pacman -S --noconfirm edk2-aarch64 edk2-riscv64 qemu-system-arm-firmware
+fi
+if [ "$ARCH" = "loongarch64" ]; then
+    pacman -S --noconfirm edk2-loongarch64
 fi
 pacman -Syu --noconfirm --overwrite '/usr/share/qemu/*' \
-    gtk3             \
-    libdecor         \
     pipewire-audio   \
     pipewire-jack    \
     qemu-full        \
@@ -30,12 +33,6 @@ pacman -Syu --noconfirm --overwrite '/usr/share/qemu/*' \
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini
 
-# Comment this out if you need an AUR package
 make-aur-package zenity-rs-bin
-make-aur-package quickemu
-
-# If the application needs to be manually built that has to be done down here
-#mkdir -p ./AppDir/bin
-#cp /usr/share/qemu/* ./AppDir/bin
