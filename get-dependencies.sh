@@ -36,5 +36,3 @@ make-aur-package zenity-rs-bin
 make-aur-package quickemu
 
 # If the application needs to be manually built that has to be done down here
-#mkdir -p ./AppDir/bin
-#cp /usr/share/qemu/* ./AppDir/bin
