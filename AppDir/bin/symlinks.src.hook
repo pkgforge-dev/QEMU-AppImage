@@ -1,19 +1,19 @@
-#!/bin/false
+#!/bin/sh
 
-_make_symlinks() {
+_make_symlinks_in_path() {
 	[ -n "$APPIMAGE" ] || return 1
 	[ -n "$APPDIR" ] || return 1
 	bindir=${XDG_BIN_HOME:-~/.local/bin}
-	mkdir -p "$bindir"
+	mkdir -p "$BINDIR"
 	cd "$APPDIR"/bin
 	set +e
 	set -- ./qemu* ./quick*
 	for b do
-		ln -sv "$APPIMAGE" "$bindir"/"${b##*/}" 2>/dev/null
+		ln -sv "$APPIMAGE" "$BINDIR"/"${b##*/}" 2>/dev/null
 	done
 	exit 0
 }
 
 if [ "$1" = '--make-symlinks' ]; then
-	_make_symlinks
+	_make_symlinks_in_path
 fi
