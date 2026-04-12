@@ -27,6 +27,7 @@ quick-sharun \
 	/usr/bin/quickget    \
 	/usr/bin/quickreport \
 	/usr/share/edk2      \
+	/usr/lib/binfmt.d	 \
 	/usr/lib/libcapstone.so.5
 
 # Additional changes can be done in between here
