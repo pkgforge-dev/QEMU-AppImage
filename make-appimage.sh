@@ -21,9 +21,6 @@ quick-sharun \
 	/usr/bin/bash        \
 	/usr/bin/zenity      \
 	/usr/bin/spicy       \
-	/usr/bin/quickemu    \
-	/usr/bin/quickget    \
-	/usr/bin/quickreport \
 	/usr/share/edk2      \
 	/usr/share/qemu		 \
 	/usr/lib/binfmt.d	 \
