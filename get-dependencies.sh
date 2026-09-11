@@ -10,7 +10,7 @@ if [ "$ARCH" = "aarch64" ]; then
     DATE=202608-1
     wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-aarch64-${DATE}-any.pkg.tar.zst
     wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-riscv64-${DATE}-any.pkg.tar.zst
-    wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/qemu-system-arm-firmware-11.1.0-1-x86_64.pkg.tar.zst
+    wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/qemu-system-arm-firmware-11.1.1-1-x86_64.pkg.tar.zst
     wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-ovmf-${DATE}-any.pkg.tar.zst
     wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/seabios-1.17.0-2-any.pkg.tar.zst
     pacman -U *.pkg.tar.zst --noconfirm --arch x86_64
