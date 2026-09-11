@@ -7,7 +7,7 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 if [ "$ARCH" = "aarch64" ]; then
-    DATE=202605-1
+    DATE=202608-1
     wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-aarch64-${DATE}-any.pkg.tar.zst
     wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/edk2-riscv64-${DATE}-any.pkg.tar.zst
     wget https://umea.mirror.pkgbuild.com/extra/os/x86_64/qemu-system-arm-firmware-11.1.0-1-x86_64.pkg.tar.zst
