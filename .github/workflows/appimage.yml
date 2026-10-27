@@ -18,6 +18,7 @@ jobs:
           # comment out this line if aarch64 is not wanted
           - { runs-on: ubuntu-24.04-arm, name: Build AppImage, arch: aarch64 }
     container: ghcr.io/pkgforge-dev/archlinux:latest
+    options: --privileged --device /dev/fuse
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Preparing Container
