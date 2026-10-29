@@ -12,7 +12,6 @@ export ICON=https://gitlab.com/qemu-project/qemu/-/raw/master/ui/icons/qemu.svg
 export DEPLOY_OPENGL=1
 export DEPLOY_VULKAN=1
 export DEPLOY_PIPEWIRE=1
-export OPTIMIZE_LAUNCH=1
 
 # Deploy dependencies
 quick-sharun \
