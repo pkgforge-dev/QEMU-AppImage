@@ -34,7 +34,7 @@ jobs:
 
   # this part runs via QEMU so expect higher CI times
   build-additional-cpu-arches:
-    if: true # set to true to build the below arches
+    if: false # set to true to build the below arches
     name: "${{ matrix.name }} (${{ matrix.arch }})"
     runs-on: ubuntu-latest
     strategy:
