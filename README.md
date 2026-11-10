@@ -17,7 +17,7 @@
 
 </div>
 
-### ⚠️ Optional Transparent qemu-userspace needs a binfmt handler installed on the host ⚠️
+### ⚠️ Optional: Transparent qemu-userspace needs a binfmt handler installed on the host ⚠️
 
 User mode emulation works out of the box when invoked explicitly:
 
@@ -25,7 +25,7 @@ User mode emulation works out of the box when invoked explicitly:
 ./QEMU*.AppImage qemu-aarch64 ./program
 ```
 
-Running a foreign binary directly (or inside a chroot/container) instead needs a `binfmt_misc` handler, which is a root-only kernel operation and cannot be set up from the AppImage. Install the host package `qemu-user-static-binfmt` (or `qemu-user-binfmt`) if you want that.
+Running a foreign binary directly (or inside a chroot/container) instead needs a `binfmt_misc` handler, which is a root-only kernel operation and cannot be set up from AppImage. Install the host package `qemu-user-static-binfmt` (or `qemu-user-binfmt`) if you want that.
 
 * Supports -enable-kvm, TPM, UEFI (GPU passthrough), virtiofsd and audio.
 
