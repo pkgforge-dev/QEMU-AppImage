@@ -19,7 +19,7 @@
 
 ### ⚠️ Transparent qemu-userspace needs a binfmt handler installed on the host ⚠️
 
-Registering a `binfmt_misc` handler is a root-only kernel operation, so it cannot happen inside the AppImage. The static interpreters are bundled, so on x86_64 you can install the handlers with:
+Registering a `binfmt_misc` handler is a root-only kernel operation, so it cannot happen from AppImage. The static interpreters are bundled, so on x86_64 you can install the handlers with:
 
 ```
 ./QEMU*.AppImage --make-binfmt      # write /usr/local/lib/binfmt.d + register now
