@@ -31,10 +31,6 @@ pacman -Syu --noconfirm --overwrite '/usr/share/qemu/*' \
     swtpm            \
     virtiofsd
 
-if [ "$ARCH" = "x86_64" ]; then
-    pacman -S --noconfirm qemu-user-static
-fi
-
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano libdecor-mini
