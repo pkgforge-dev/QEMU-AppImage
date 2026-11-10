@@ -17,7 +17,18 @@
 
 </div>
 
-### ⚠️ Need to have `qemu-user-static-binfmt` installed to be able to use qemu-userspace ⚠️
+### ⚠️ Transparent qemu-userspace needs a binfmt handler installed on the host ⚠️
+
+Registering a `binfmt_misc` handler is a root-only kernel operation, so it cannot happen inside the AppImage. The static interpreters are bundled, so on x86_64 you can install the handlers with:
+
+```
+./QEMU*.AppImage --make-binfmt      # write /usr/local/lib/binfmt.d + register now
+./QEMU*.AppImage --remove-binfmt    # undo it
+```
+
+This asks for root once (via `pkexec`/`lxqt-sudo`/`run0`) and keeps the rules in `/usr/local/lib/binfmt.d`, so `systemd-binfmt.service` re-registers them on every boot. Without a handler, foreign binaries must be run explicitly: `./QEMU*.AppImage qemu-aarch64 ./program`.
+
+Alternatively install the host package `qemu-user-static-binfmt` (or `qemu-user-binfmt`), which does the same thing for you.
 
 * Supports -enable-kvm, TPM, UEFI (GPU passthrough), virtiofsd and audio.
 
